@@ -17,7 +17,7 @@ Provides access to various details of any question using simple REST API:
     - Answer body
     - Answer body (HTML)
 
-**Author: [Karan Goel](http://www.goel.im/)**
+**Author: [Hasan Diwan](mailto:hasandiwan+quora@gmail.com)**
 
 ### Start
 
@@ -34,7 +34,7 @@ Provides access to various details of any question using simple REST API:
 
 ### Usage
 
-**Base URL:** [http://q.goel.im](http://q.goel.im)
+Base URL is wherever you deploy it.
 
 **Output:** JSON
 
