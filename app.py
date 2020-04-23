@@ -28,7 +28,7 @@ def get_answers(q_link):
 
     question = {}
     question['url'] = url
-    question['title'] = soup.find("div", {"class": "question_text_edit"}).text
+    question['title'] = soup.find("div", {"class": "question_text_edit"}).get_text()
     question['topics'] = [topic.text for topic in soup.find_all("span", {"class": "TopicName"})]
     question['details'] = soup.find("div", {"class": "question_details_text"}).text
 
@@ -77,17 +77,17 @@ def get_questions(s_link):
     if url.domain() not in ['quora.com', 'www.quora.com']:
         return 'error, not quora'
 
-    url = URL(
+    quora_url = URL(
         scheme='https',
         host='www.quora.com',
         path=url.path(),
         query='share=1').as_string()
 
-    soup = BeautifulSoup(requests.get(url).text)
+    soup = BeautifulSoup(requests.get(quora_url).get_text())
 
     topic = {}
-    topic['url'] = url
-    topic['title'] = soup.find("span", {"class": "TopicName"}).text
+    topic['url'] = quora_url
+    topic['title'] = url.path().split('/')[-1]
 
     questions = []
     divs = soup.find_all("div", {"class": "pagedlist_item"})
@@ -110,6 +110,7 @@ def get_questions(s_link):
         if one_question['title'] != "":
             questions.append(one_question)
 
+    print(f'{type(topic)}, {type(questions)}')
     return jsonify(topic=topic, questions=questions)
 
 if __name__ == '__main__':
