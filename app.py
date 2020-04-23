@@ -9,7 +9,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    with open('templates/index.html', 'r') as fin:
+        return fin.read().encode('utf-8')
 
 @app.route('/url=<path:q_link>')
 def get_answers(q_link):
