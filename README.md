@@ -52,7 +52,7 @@ Example:
 
 Example:
 
-`http://q.goel.im/url=https://www.quora.com/Google/What-are-the-changes-made-to-the-host-matching-phase-for-Google-Summer-Internships-from-2013-to-2014`
+http://localhost:5000/url=https://www.quora.com/Google/What-are-the-changes-made-to-the-host-matching-phase-for-Google-Summer-Internships-from-2013-to-2014`
 
 Output:
 
@@ -85,12 +85,10 @@ Donations
 
 If *Qnowledge* has helped you in any way, and you'd like to help the developer, please consider donating.
 
-**- BTC: [19dLDL4ax7xRmMiGDAbkizh6WA6Yei2zP5](http://i.imgur.com/bAQgKLN.png)**
-
-**- Flattr: [https://flattr.com/profile/thekarangoel](https://flattr.com/profile/thekarangoel)**
+**- Flattr: [https://flattr.com/profile/hasandiwan](https://flattr.com/profile/hasandiwan)**
 
 
 Contribute
 ========
 
-If you want to add any new features, or improve existing ones, feel free to [send a pull request](https://github.com/karan/Qnowledge#usage)!
+If you want to add any new features, or improve existing ones, feel free to [send a pull request](https://github.com/hasandiwan/Qnowledge)!
